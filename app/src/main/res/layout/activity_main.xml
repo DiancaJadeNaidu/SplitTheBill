@@ -2,11 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/catering_food_dinner_20584"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titleText"
@@ -16,7 +25,7 @@
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -46,7 +55,6 @@
         android:id="@+id/totalBillInput"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:background="@android:drawable/editbox_background"
         android:hint="Enter Total Bill"
         android:inputType="numberDecimal"
         android:padding="10dp"
@@ -58,7 +66,6 @@
         android:id="@+id/tipPercentageInput"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:background="@android:drawable/editbox_background"
         android:hint="Enter Tip Percentage"
         android:inputType="numberDecimal"
         android:padding="10dp"
@@ -70,7 +77,6 @@
         android:id="@+id/numPeopleInput"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:background="@android:drawable/editbox_background"
         android:hint="Enter Number of People"
         android:inputType="number"
         android:padding="10dp"

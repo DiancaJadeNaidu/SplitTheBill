@@ -34,11 +34,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         addPersonButton.setOnClickListener {
-            val nameInput = EditText(this)
-            nameInput.hint = "Enter Name"
-            val amountInput = EditText(this)
-            amountInput.hint = "Enter Amount"
-            amountInput.inputType = android.text.InputType.TYPE_CLASS_NUMBER or android.text.InputType.TYPE_NUMBER_FLAG_DECIMAL
+            val nameInput = EditText(this).apply { hint = "Enter Name" }
+            val amountInput = EditText(this).apply {
+                hint = "Enter Amount"
+                inputType = android.text.InputType.TYPE_CLASS_NUMBER or android.text.InputType.TYPE_NUMBER_FLAG_DECIMAL
+            }
 
             individualPaymentsLayout.addView(nameInput)
             individualPaymentsLayout.addView(amountInput)
@@ -73,6 +73,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
-
-
